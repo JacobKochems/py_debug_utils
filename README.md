@@ -12,12 +12,6 @@ The function `pretty_trace()` was taken and adapted from [here](https://github.c
 demo.py:
 ```python
 #!/usr/bin/env python
-# ------------------------------------------------------------------------------
-# debug_utils
-# Copyright (C) 2025  Jacob Kochems <jacobkochems+git@gmail.com>
-# SPDX-License-Identifier: MIT
-# ------------------------------------------------------------------------------
-
 from debug_utils import debug_break
 
 
@@ -37,22 +31,22 @@ Command:
 ```
 Output:
 ```
-BREAK POINT @ line 12 in ./test_debug_utils.py:fibonacci():
+BREAK POINT @ line 6 in ./test_debug_utils.py:fibonacci():
 n = 5
  Quit [q] | Continue [c] | Show Stack Frame [s]
  Show Traceback [t] | Start Python Debugger [d]
 ```
 ```
 ╭─────────────────────────────── Traceback (most recent call last) ────────────────────────────────╮
-│ /home/jacob/repos/berlin-6g-conference/pybadger/pybadger/./test_debug_utils.py:12 in fibonacci   │
+│ /home/jacob/repos/berlin-6g-conference/pybadger/pybadger/test_debug_utils.py:6 in fibonacci      │
 │                                                                                                  │
-│    9                                                                                             │
-│   10                                                                                             │
-│   11 def fibonacci(n: int) -> int:                                                               │
-│ ❱ 12 │   debug_break('n =', n)                                                                   │
-│   13 │   if n < 2:                                                                               │
-│   14 │   │   return n                                                                            │
-│   15 │   else:                                                                                   │
+│    3                                                                                             │
+│    4                                                                                             │
+│    5 def fibonacci(n: int) -> int:                                                               │
+│ ❱  6 │   debug_break('n =', n)                                                                   │
+│    7 │   if n < 2:                                                                               │
+│    8 │   │   return n                                                                            │
+│    9 │   else:                                                                                   │
 │                                                                                                  │
 │ ╭─ locals ─╮                                                                                     │
 │ │ n = 5    │                                                                                     │
