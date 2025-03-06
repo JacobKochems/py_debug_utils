@@ -9,8 +9,17 @@ The function `pretty_trace()` was taken and adapted from [here](https://github.c
 * rich
 
 # Usage Example
+demo.py:
 ```python
+#!/usr/bin/env python
+# ------------------------------------------------------------------------------
+# debug_utils
+# Copyright (C) 2025  Jacob Kochems <jacobkochems+git@gmail.com>
+# SPDX-License-Identifier: MIT
+# ------------------------------------------------------------------------------
+
 from debug_utils import debug_break
+
 
 def fibonacci(n: int) -> int:
     debug_break('n =', n)
@@ -19,7 +28,12 @@ def fibonacci(n: int) -> int:
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
 
+
 fibonacci(5)
+```
+Command:
+```shell
+> python demo.py
 ```
 Output:
 ```
