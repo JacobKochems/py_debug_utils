@@ -1,0 +1,24 @@
+[project]
+name = "py-debug-utils"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Jacob Kochems",email = "462684-Kochems@users.noreply.gitlab.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "rich (>=13.9.4,<14.0.0)",
+    "readchar (>=4.2.1,<5.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "py_debug_utils", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+demo = "demo:main"
