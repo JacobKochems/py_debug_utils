@@ -26,6 +26,7 @@ def disable_debug_break():
 
 def pretty_trace(start_at_parent_frame=False, single_frame=False):
     # adapted from: https://github.com/Textualize/rich/discussions/1531#discussioncomment-6409446
+    # acknowledgement to toppk, https://github.com/toppk
 
     trace = None
     depth = 2 if start_at_parent_frame else 1
