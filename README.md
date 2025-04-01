@@ -42,8 +42,8 @@ Output:
 ```
 BREAK POINT @ line 6 in ./demo.py:fibonacci():
 n = -5
- Quit [q] | Continue [c] | Show Stack Frame [s]
- Show Traceback [t] | Start Python Debugger [d]
+ Quit [q] | Next [n] | Python Debugger [d]
+ Show Stack Frame [s] | Show Traceback [t]
 ```
 ```
 ╭──────────────── Traceback (most recent call last) ────────────────╮
@@ -62,6 +62,6 @@ n = -5
 │ ╰──────────╯                                                      │
 ╰───────────────────────────────────────────────────────────────────╯
 Exception: pretty_trace
- Quit [q] | Continue [c] | Show Stack Frame [s]
- Show Traceback [t] | Start Python Debugger [d]
+ Quit [q] | Next [n] | Python Debugger [d]
+ Show Stack Frame [s] | Show Traceback [t]
 ```

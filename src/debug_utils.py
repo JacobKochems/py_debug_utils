@@ -27,8 +27,8 @@ def debug_break(*args, **kwargs) -> None:
         return
 
     def print_cmd():
-        print(' Quit [q] | Continue [c] | Show Stack Frame [s]')
-        print(' Show Traceback [t] | Start Python Debugger [d]')
+        print(' Quit [q] | Next [n] | Python Debugger [d]')
+        print(' Show Stack Frame [s] | Show Traceback [t]')
         if not rich_output:
             print()
 
@@ -46,7 +46,7 @@ def debug_break(*args, **kwargs) -> None:
         print(*args, **kwargs)
         print()
     print_cmd()
-    while (key := readchar.readkey()) != 'c':
+    while (key := readchar.readkey()) != 'n':
         if key == 'q':
             exit()
         if key == 's':
