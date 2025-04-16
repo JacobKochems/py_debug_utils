@@ -15,11 +15,13 @@ debug_enabled: bool = True
 rich_output: bool = True
 
 
-def debug_config(*, enabled: bool = True, pretty: bool = True):
+def debug_config(*, enabled: bool = True, pretty: bool = True, sep: str = ''):
     global debug_enabled
     global rich_output
+    global separator
     debug_enabled = enabled
     rich_output = pretty
+    separator = sep
 
 
 def debug_break(*args, **kwargs) -> None:
@@ -36,6 +38,8 @@ def debug_break(*args, **kwargs) -> None:
     filename = os.path.basename(frame.f_code.co_filename)
     func_name = frame.f_code.co_name
     line_no = frame.f_lineno
+    if separator:
+        rprint(separator)
     if rich_output:
         rprint(
             f'[red]BREAK POINT[/] @ line {line_no} in ./{filename}:[green]{func_name}()[/]:'
@@ -67,6 +71,8 @@ def debug_watch(*args, **kwargs) -> None:
     filename = os.path.basename(frame.f_code.co_filename)
     func_name = frame.f_code.co_name
     line_no = frame.f_lineno
+    if separator:
+        rprint(separator)
     if rich_output:
         rprint(
             f'[red]PROBE[/] @ line {line_no} in ./{filename}:[green]{func_name}()[/]:'
