@@ -13,6 +13,7 @@ import readchar
 
 debug_enabled: bool = True
 rich_output: bool = True
+separator: str | None = None
 
 
 def debug_config(*, enabled: bool = True, pretty: bool = True, sep: str = ''):
